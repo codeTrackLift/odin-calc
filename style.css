@@ -14,7 +14,7 @@ html {
     border: 15px solid darkblue;
     border-radius: 10px;
     margin: 0px 6.5rem 0px 6.5rem;
-    width: 30rem;
+    width: 25rem;
 }
 
 h2 {
@@ -27,13 +27,13 @@ h2 {
 
 #welcome {
     background-color: darkslategray;
-    width: 30rem;
+    width: 25rem;
     text-align: center;
 }
 
 #display {
     background-color: gray;
-    width: 28rem;
+    width: 23rem;
     text-align: end;
     border: 1rem solid gray;
 }
@@ -41,7 +41,7 @@ h2 {
 #buttons {
     display: flex;
     flex-direction: row;
-    width: 30rem;
+    width: 25rem;
 }
 
 #numbers {
@@ -76,8 +76,8 @@ button {
     font-weight: bolder;
     font-size: large;
     transition: all .2s ease-in-out;
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
 }
 
 button:hover {
