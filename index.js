@@ -79,6 +79,9 @@ function inputB(n) {
         console.log("number is already a float");
         return;
     }
+    if(b == 0 && n > 0) {
+        b = "";
+    }
     if(b !== "") {
         b = b.toString();
         b = b + n.toString();
