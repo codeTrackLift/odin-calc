@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Project</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./index.js" defer></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="welcome">
+            <h1>Calculator Project</h1>
+        </div>
+        <div id="display">
+            <h2><span id="aDisplay">0</span> 
+                <span id="operDisplay"></span> <span id="bDisplay"></span>
+            </h2>
+        </div>
+
+        <div id="buttons">
+            <div id="numbers">
+                <button id="btn1" onclick="input(1)">1</button>
+                <button id="btn2" onclick="input(2)">2</button>
+                <button id="btn3" onclick="input(3)">3</button>
+                <button id="btn4" onclick="input(4)">4</button>
+                <button id="btn5" onclick="input(5)">5</button>
+                <button id="btn6" onclick="input(6)">6</button>
+                <button id="btn7" onclick="input(7)">7</button>
+                <button id="btn8" onclick="input(8)">8</button>
+                <button id="btn9" onclick="input(9)">9</button>
+                <button id="btn0" onclick="input(0)">0</button>
+                <button id="btnPeriod" onclick="input('.')">.</button>
+            </div>
+
+            <div id="operators">
+                <button id="btnPlus" onclick="newOper('+')">+</button>
+                <button id="btnMinus" onclick="newOper('-')">-</button>
+                <button id="btnMultiply" onclick="newOper('*')">x</button>
+                <button id="btnDivide" onclick="newOper('/')">/</button>
+                <button id="btnEqual" onclick="equalFunc()">=</button>
+                <button id="btnClear" onclick="clearCalc()">C</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
