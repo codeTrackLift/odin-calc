@@ -48,6 +48,7 @@ function clearCalc() {
 
 // Initial value input and handling variable a
 function input(n) {
+    let testStr = display.toString();
     if(a !== "" && oper !== "") {
         inputB(n);
         return;
@@ -55,7 +56,7 @@ function input(n) {
     if(display === oper) {
         display = "";
     }
-    if(n === "." && display.includes(".") === true) {
+    if(n === "." && testStr.includes(".") === true) {
         return;
     }
     if(n == 0 && display == 0) {
@@ -68,7 +69,8 @@ function input(n) {
 
 // Handling variable b
 function inputB(n) {
-    if(n === "." && b.includes(".") === true) {
+    let testStr = b.toString();
+    if(n === "." && testStr.includes(".") === true) {
         return;
     }
     if(n == 0 && b == 0) {
@@ -144,7 +146,7 @@ function keyPress(event) {
         event.key.includes("8") || 
         event.key.includes("9") || 
         event.key.includes("0") || 
-        event.code.includes('Period')) {
+        event.key.includes('.')) {
         event.preventDefault();
         if(event.key.includes('1')) {
             btn1.classList.add('hover');
