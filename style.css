@@ -2,10 +2,10 @@
     box-sizing: border-box;
 }
 html {
-    background-color: black;
+    background-color: rgb(62, 61, 61);
     color: silver;
     font-family: monospace;
-        background-image: linear-gradient(rgba(75, 75, 75, 0.7), rgba(75, 75, 75, 0.7)), url("./chalkboard.jpg");
+    /* background-image: linear-gradient(rgba(75, 75, 75, 0.7), rgba(75, 75, 75, 0.7)), url("./chalkboard.jpg"); */
     background-size: cover;
     background-attachment: fixed;
     background-position: top center;
@@ -13,14 +13,23 @@ html {
     justify-content: center;
     display: flex;
     position: relative;
-    min-height: 100%;
-    margin-bottom: 1rem;
-    margin-left: 10rem;
-    margin-right: 2rem;
-    /* overflow: hidden; */
+    /* min-height: 100%; */
+    /* margin-bottom: 1rem; */
+    /* margin-left: 50vmin;  */
+    /* margin-right: 40vmin;  */
+    overflow: hidden;
+    /* height: 100vmin; */
+    width: 500px;
+    margin: 0 auto;
 }
 
 #wrapper {
+    background-image: linear-gradient(rgba(75, 75, 75, 0.7), rgba(75, 75, 75, 0.7)), url("./chalkboard.jpg");
+    background-size: 125%;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+
     display: flex;
     flex-direction: column;
     border: 1px solid silver;
@@ -31,6 +40,8 @@ html {
     width: 28.5rem;
     height: 30rem;
     padding: 1rem;
+    justify-self: center;
+    justify-content: center;
 }
 
 h2 {
