@@ -23,34 +23,39 @@ html {
 #wrapper {
     display: flex;
     flex-direction: column;
-    border: 15px solid darkblue;
+    border: 1px solid silver;
     border-radius: 10px;
     margin-left: 6.5rem;
     margin-right: 6.5rem;
     margin-top: 2rem;
     width: 28.5rem;
-    height: 33rem;
+    height: 30rem;
+    padding: 1rem;
 }
 
 h2 {
     color: orange;
 }
 
+#welcome {
+    background-color: transparent;
+    width: 26rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
 #aDisplay,#bDisplay {
     color: cyan;
 }
 
-#welcome {
-    background-color: darkslategray;
-    width: 26rem;
-    text-align: center;
-}
-
 #display {
-    background-color: gray;
+    background-color: transparent;
+    border: 1px solid silver;
+    margin-left: 0.25rem;
+    padding-right: 1rem;
     width: 26rem;
     text-align: end;
-    border: 1rem solid gray;
 }
 
 #buttons {
@@ -60,7 +65,7 @@ h2 {
 }
 
 #numbers {
-    background-color: dimgray;
+    background-color: transparent;
     font-size: xx-large;
     width: 50rem;
     display: flex;
@@ -73,7 +78,7 @@ h2 {
 }
 
 #operators {
-    background-color: darkgoldenrod;
+    background-color: transparent;
     display: flex;
     flex-wrap: wrap;
     flex: 0 1 auto;
@@ -85,8 +90,8 @@ h2 {
 }
 
 button {
-    background-color: darkslategrey;
-    border: 1px solid dimgray;
+    background-color: transparent;
+    border: 1px solid silver;
     color: silver;
     font-weight: bolder;
     font-size: large;
