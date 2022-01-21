@@ -12,24 +12,13 @@ html {
     background-repeat: no-repeat;
     justify-content: center;
     display: flex;
-    position: relative;
-    /* min-height: 100%; */
-    /* margin-bottom: 1rem; */
-    /* margin-left: 50vmin;  */
-    /* margin-right: 40vmin;  */
-    /* height: 100vmin; */
+    position: sticky;
     overflow: auto;
     width: 100vmax;
     margin: 0 auto;
 }
 
 #wrapper {
-    /* background-image: linear-gradient(rgba(75, 75, 75, 0.7), rgba(75, 75, 75, 0.7)), url("./chalkboard.jpg");
-    background-size: 125%;
-    background-attachment: fixed;
-    background-position: top;
-    background-repeat: no-repeat; */
-
     display: flex;
     flex-direction: column;
     border: 1px solid silver;
