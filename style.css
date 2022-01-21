@@ -9,25 +9,25 @@ html {
     background-size: cover;
     background-attachment: fixed;
     background-position: top center;
-    background-repeat: no-repeat;
+    background-repeat: round;
     justify-content: center;
     display: flex;
-    position: sticky;
+    position: fixed;
     overflow: auto;
-    width: 50rem;
+    width: 100vw;
     margin: 0 auto;
+    overflow: auto;
 }
 
 #wrapper {
     display: flex;
+    position: relative;
     flex-direction: column;
     border: 1px solid silver;
     border-radius: 10px;
-    margin-left: 6.5rem;
-    margin-right: 6.5rem;
-    margin-top: 2rem;
-    width: 28.5rem;
-    height: 30rem;
+    margin: 0 auto;
+    width: fit-content;
+    height: fit-content;
     padding: 1rem;
     justify-self: center;
     justify-content: center;
@@ -128,9 +128,8 @@ button:hover {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    margin-left: 5rem;
-    margin-top: 1rem;
-    width: 30rem;
+    margin: 1rem auto;
+    width: fit-content;
 }
 
 .footer>a>img {
@@ -146,12 +145,18 @@ button:hover {
 @media (max-width: 320px) {
     
     html {
-        width: 30rem;
+        width: 100vw;
+        background-position: top;
+        background-size: 30rem;
+        background-repeat: round;
     }
 
     #wrapper {
-        width: 23rem;
-        height: fit-content;
+        width: fit-content;
+        height: min-content;
+        justify-content: center;
+        display: flex;
+        margin: 0 auto;
     }
 
     #welcome {
