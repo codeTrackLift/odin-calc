@@ -9,14 +9,17 @@ html {
     background-size: cover;
     background-attachment: fixed;
     background-position: top center;
-    background-repeat: round;
+    /* background-repeat: round; */
     justify-content: center;
     display: flex;
     position: fixed;
-    overflow: auto;
     width: 100vw;
+    height: 500rem;
     margin: 0 auto;
-    overflow: auto;
+}
+
+body {
+    overflow: overflow-y;
 }
 
 #wrapper {
@@ -148,7 +151,7 @@ button:hover {
         width: 100vw;
         background-position: top;
         background-size: 30rem;
-        background-repeat: round;
+        /* background-repeat: round; */
     }
 
     #wrapper {
@@ -182,5 +185,55 @@ button:hover {
 
     #operators {
         width: 20rem;
+    }
+}
+
+@media (max-height: 320px) {
+    
+    html {
+        width: 100vw;
+        height: 100vh;
+        background-position: top;
+        background-size: 30rem;
+        background-repeat: round;
+    }
+
+    #wrapper {
+        width: fit-content;
+        height: 18rem;
+        justify-content: center;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    #welcome {
+        width: max-content;
+        font-size: small;
+    }
+
+    #display {
+        width: 20rem;
+    }
+
+    button {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    #buttons {
+        width: 20rem;
+    }
+
+    #numbers {
+        width: 30rem;
+        font-size: small;
+        font-weight: lighter;
+    }
+
+    #btnDel {
+        font-size: smaller;
+    }
+    #operators {
+        width: 25rem;
     }
 }
