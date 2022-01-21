@@ -58,10 +58,9 @@ function input(n) {
     if(n === "." && display.includes(".") === true) {
         return;
     }
-    // if(display === "0" && oper === "" && b === "") {
-        // display = "";
-        // document.getElementById('aDisplay').innerText = "";
-    // }
+    if(n == 0 && display == 0) {
+        return;
+    }
     display = display.toString();
     display = display + n.toString();
     updateDisplay();
@@ -72,9 +71,9 @@ function inputB(n) {
     if(n === "." && b.includes(".") === true) {
         return;
     }
-    // if(b == 0 && n > 0) {
-    //     b = "";
-    // }
+    if(n == 0 && b == 0) {
+        return;
+    }
     if(b !== "") {
         b = b.toString();
         b = b + n.toString();
