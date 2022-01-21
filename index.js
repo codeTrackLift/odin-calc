@@ -1,5 +1,6 @@
 // Global variables & initializing display
 const wrapper = document.querySelector('#wrapper');
+const gitLogo = document.querySelector('#gitLogo');
 let display = "";
 let a = 0;
 let b = "";
@@ -37,7 +38,13 @@ function updateDisplay() {
 
 // Clear display and values
 function clearCalc() {
-    console.log("clear pressed");
+    wrapper.classList.add('shake');
+    wrapper.addEventListener('animationend',
+    () => {
+        wrapper.classList.remove('shake');
+    },
+    { once: true }
+    );
     display = "";
     a = 0;
     b = "";
@@ -130,6 +137,13 @@ function newOper(x) {
 
 // Equal button
 function equalFunc() {
+    gitLogo.classList.add('shake');
+    gitLogo.addEventListener('animationend',
+    () => {
+        gitLogo.classList.remove('shake');
+    },
+    { once: false }
+    );
     operate(a, oper, b);
     a = +display;
     b = "";
@@ -214,13 +228,6 @@ function keyPress(event) {
         if(event.code.includes('KeyC')) {
             btnClear.classList.add('hover');
         }
-        wrapper.classList.add('shake');
-        wrapper.addEventListener('animationend',
-        () => {
-            wrapper.classList.remove('shake');
-        },
-        { once: true }
-        );
         clearCalc();
     };
     if(event.key.includes('Backspace')) {
