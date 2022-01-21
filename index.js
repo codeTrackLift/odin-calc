@@ -1,4 +1,5 @@
 // Global variables & initializing display
+const wrapper = document.querySelector('#wrapper');
 let display = "";
 let a = 0;
 let b = "";
@@ -213,6 +214,13 @@ function keyPress(event) {
         if(event.code.includes('KeyC')) {
             btnClear.classList.add('hover');
         }
+        wrapper.classList.add('shake');
+        wrapper.addEventListener('animationend',
+        () => {
+            wrapper.classList.remove('shake');
+        },
+        { once: true }
+        );
         clearCalc();
     };
     if(event.key.includes('Backspace')) {
