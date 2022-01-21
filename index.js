@@ -8,22 +8,17 @@ updateDisplay();
 // Operate function that accepts each basic operator and two variables
 function operate(a, oper, b) {
     b = +b;
-    console.log("operate: " + a + oper + b);
     switch (oper) {
         case '+':
-            console.log(a + b);
             display = a + b;
             break;
         case '-':
-            console.log(a - b);
             display = a - b;
             break;
         case '*':
-            console.log(a * b);
             display = a * b;
             break;
         case '/':
-            console.log(a / b);
             display = a / b;
             break;
     }
@@ -51,9 +46,8 @@ function clearCalc() {
     document.getElementById('bDisplay').innerText = b;
 }
 
-// Input values
+// Initial value input and handling variable a
 function input(n) {
-    console.log("user: " + n);
     if(a !== "" && oper !== "") {
         inputB(n);
         return;
@@ -61,27 +55,26 @@ function input(n) {
     if(display === oper) {
         display = "";
     }
-    if(n === "." && +display - Math.floor(+display) !== 0) {
-        console.log("number is already a float");
+    if(n === "." && display.includes(".") === true) {
         return;
     }
-    if(display === "0" && oper === "" && b === "") {
-        console.log('running');
-        display = "";
-        document.getElementById('aDisplay').innerText = "";
-    }
+    // if(display === "0" && oper === "" && b === "") {
+        // display = "";
+        // document.getElementById('aDisplay').innerText = "";
+    // }
     display = display.toString();
     display = display + n.toString();
     updateDisplay();
 }
+
+// Handling variable b
 function inputB(n) {
-    if(n === "." && +b - Math.floor(+b) !== 0) {
-        console.log("number is already a float");
+    if(n === "." && b.includes(".") === true) {
         return;
     }
-    if(b == 0 && n > 0) {
-        b = "";
-    }
+    // if(b == 0 && n > 0) {
+    //     b = "";
+    // }
     if(b !== "") {
         b = b.toString();
         b = b + n.toString();
@@ -98,12 +91,12 @@ function newOper(x) {
     if(a === "") {
         return;
     }
+    // Loops back to continue the previous operation
     if(oper !== "") {
-        console.log("continuing previous operation");
         equalFunc();
+        return;
     }
     oper = x;
-    console.log("user: " + oper);
     a = +display;
     display = a;
     updateDisplay();
