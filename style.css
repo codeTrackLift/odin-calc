@@ -188,7 +188,7 @@ button:hover {
     }
 }
 
-@media (max-height: 320px) {
+@media (max-height: 480px) {
     
     html {
         width: 100vw;
