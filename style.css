@@ -67,7 +67,6 @@ h2 {
     align-items: flex-end;
     gap: 1rem;
     padding-bottom: 1rem;
-    
 }
 
 button {
@@ -78,6 +77,12 @@ button {
     transition: all .2s ease-in-out;
     width: 4rem;
     height: 4rem;
+    border-radius: 8px;
+}
+
+#numbers>#btnDel {
+    justify-content: center;
+    align-items: center;
 }
 
 button:hover {
