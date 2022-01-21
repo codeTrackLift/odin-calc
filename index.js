@@ -102,8 +102,13 @@ function delChar() {
     }
     display = display.toString();
     display = display.slice(0, -1);
+    if(display === "") {
+        display = 0;
+        document.getElementById('aDisplay').innerText = display;
+        display = "";
+        return;
+    }
     updateDisplay();
-    return;
 }
 
 // Input operators

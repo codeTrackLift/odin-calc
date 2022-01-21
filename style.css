@@ -98,11 +98,13 @@ button {
 button:hover {
     background-color: lime;
     color: black;
+    border: 1px solid silver;
     transform: scale(1.15);
 }
 
 .hover {
     background-color: lime;
     color: black;
+    border: 1px solid silver;
     transform: scale(1.15);
 }
