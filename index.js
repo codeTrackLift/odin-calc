@@ -1,6 +1,12 @@
 // Global variables & initializing display
 const wrapper = document.querySelector('#wrapper');
 const gitLogo = document.querySelector('#gitLogo');
+const tinkSound = new Audio('./tink.wav');
+const kickSound = new Audio('./kick.wav');
+const hihatSound = new Audio('./hihat.wav');
+const openhatSound = new Audio('./openhat.wav');
+const snareSound = new Audio('./snare.wav');
+const rideSound = new Audio('./ride.wav');
 let display = "";
 let a = 0;
 let b = "";
@@ -38,6 +44,7 @@ function updateDisplay() {
 
 // Clear display and values
 function clearCalc() {
+    openhatSound.play();
     wrapper.classList.add('shake');
     wrapper.addEventListener('animationend',
     () => {
@@ -56,6 +63,7 @@ function clearCalc() {
 
 // Initial value input and handling variable a
 function input(n) {
+
     let testStr = display.toString();
     if(a !== "" && oper !== "") {
         inputB(n);
@@ -65,6 +73,7 @@ function input(n) {
         display = "";
     }
     if(n === "." && testStr.includes(".") === true) {
+        kickSound.play();
         return;
     }
     if(n == 0 && display == 0) {
@@ -72,13 +81,16 @@ function input(n) {
     }
     display = display.toString();
     display = display + n.toString();
+    tinkSound.play();
     updateDisplay();
 }
 
 // Handling variable b
 function inputB(n) {
+    kickSound.play();
     let testStr = b.toString();
     if(n === "." && testStr.includes(".") === true) {
+        tinkSound.play();
         return;
     }
     if(n == 0 && b == 0) {
@@ -97,6 +109,7 @@ function inputB(n) {
 
 // Delete button
 function delChar() {
+    hihatSound.play();
     if(display !== "" && oper !== "" && b !== "") {
         b = b.toString();
         b = b.slice(0, -1);
@@ -121,6 +134,7 @@ function delChar() {
 
 // Input operators
 function newOper(x) {
+    snareSound.play();
     if(a === "") {
         return;
     }
@@ -137,6 +151,7 @@ function newOper(x) {
 
 // Equal button
 function equalFunc() {
+    rideSound.play();
     gitLogo.classList.add('shake');
     gitLogo.addEventListener('animationend',
     () => {
