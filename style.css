@@ -5,7 +5,7 @@ html {
     background-color: rgb(62, 61, 61);
     color: silver;
     font-family: monospace;
-    /* background-image: linear-gradient(rgba(75, 75, 75, 0.7), rgba(75, 75, 75, 0.7)), url("./chalkboard.jpg"); */
+    background-image: linear-gradient(rgba(75, 75, 75, 0.7), rgba(75, 75, 75, 0.7)), url("./chalkboard.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: top center;
@@ -17,18 +17,18 @@ html {
     /* margin-bottom: 1rem; */
     /* margin-left: 50vmin;  */
     /* margin-right: 40vmin;  */
-    overflow: hidden;
     /* height: 100vmin; */
-    width: 500px;
+    overflow: auto;
+    width: 100vmax;
     margin: 0 auto;
 }
 
 #wrapper {
-    background-image: linear-gradient(rgba(75, 75, 75, 0.7), rgba(75, 75, 75, 0.7)), url("./chalkboard.jpg");
+    /* background-image: linear-gradient(rgba(75, 75, 75, 0.7), rgba(75, 75, 75, 0.7)), url("./chalkboard.jpg");
     background-size: 125%;
     background-attachment: fixed;
     background-position: top;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
 
     display: flex;
     flex-direction: column;
