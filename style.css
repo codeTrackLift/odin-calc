@@ -78,6 +78,7 @@ h2 {
 
 button {
     background-color: darkslategrey;
+    border: 1px solid dimgray;
     color: silver;
     font-weight: bolder;
     font-size: large;
