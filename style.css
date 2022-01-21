@@ -17,7 +17,7 @@ html {
     margin-bottom: 1rem;
     margin-left: 10rem;
     margin-right: 2rem;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 #wrapper {
