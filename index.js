@@ -86,6 +86,25 @@ function inputB(n) {
     return;
 }
 
+// Delete button
+function delChar() {
+    if(display !== "" && oper !== "" && b !== "") {
+        b = b.toString();
+        b = b.slice(0, -1);
+        updateDisplay();
+        return
+    }
+    if(display !== "" && oper !== "" && b === "") {
+        oper = "";
+        updateDisplay();
+        return
+    }
+    display = display.toString();
+    display = display.slice(0, -1);
+    updateDisplay();
+    return;
+}
+
 // Input operators
 function newOper(x) {
     if(a === "") {
@@ -190,6 +209,13 @@ function keyPress(event) {
         }
         clearCalc();
     };
+    if(event.key.includes('Backspace')) {
+        event.preventDefault();
+        if(event.key.includes('Backspace')) {
+            btnDel.classList.add('hover');
+        }
+        delChar();
+    };
 }
 
 // Event listeners for keypress hover animation
@@ -204,8 +230,9 @@ document.body.addEventListener('keyup', (e) => {
     btn7.classList.remove('hover');
     btn8.classList.remove('hover');
     btn9.classList.remove('hover');
-    btn0.classList.remove('hover');
     btnPeriod.classList.remove('hover');
+    btn0.classList.remove('hover');
+    btnDel.classList.remove('hover');
     btnPlus.classList.remove('hover');
     btnMinus.classList.remove('hover');
     btnMultiply.classList.remove('hover');
@@ -224,8 +251,9 @@ const btn6 = document.getElementById("btn6");
 const btn7 = document.getElementById("btn7");
 const btn8 = document.getElementById("btn8");
 const btn9 = document.getElementById("btn9");
-const btn0 = document.getElementById("btn0");
 const btnPeriod = document.getElementById("btnPeriod");
+const btn0 = document.getElementById("btn0");
+const btnDel = document.getElementById("btnDel");
 const btnPlus = document.getElementById("btnPlus");
 const btnMinus = document.getElementById("btnMinus");
 const btnMultiply = document.getElementById("btnMultiply");
