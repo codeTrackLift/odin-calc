@@ -3,6 +3,13 @@ html {
     color: silver;
     font-family: monospace;
     box-sizing: border-box;
+    background-image: linear-gradient(rgba(75, 75, 75, 0.7), rgba(75, 75, 75, 0.7)), url("./chalkboard.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top center;
+    justify-content: center;
+    align-content: space-around;
+    display: flex;
 }
 
 #wrapper {
