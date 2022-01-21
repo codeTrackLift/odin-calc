@@ -91,6 +91,7 @@ button {
 }
 
 #numbers>#btnDel {
+    display: flex;
     justify-content: center;
     align-items: center;
 }
