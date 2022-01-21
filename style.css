@@ -14,7 +14,9 @@ html {
     display: flex;
     position: relative;
     min-height: 100%;
-    margin-left: 2rem;
+    margin-bottom: 1rem;
+    margin-left: 10rem;
+    margin-right: 2rem;
     overflow: hidden;
 }
 
@@ -25,7 +27,7 @@ html {
     border-radius: 10px;
     margin-left: 6.5rem;
     margin-right: 6.5rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     width: 28.5rem;
     height: 33rem;
 }
@@ -115,20 +117,20 @@ button:hover {
 }
 
 .footer {
-    position: absolute;
     bottom: -3rem;
-    left: 0;
+    left: 0rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    width: 100%;
-    margin-bottom: -2rem;
+    gap: 1rem;
+    margin-left: 5rem;
+    margin-top: 1rem;
+    width: 30rem;
 }
 
 .footer>a>img {
     max-height: 30px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 
 .footer>a>img:hover {
