@@ -229,13 +229,16 @@ button:hover {
     #numbers {
         width: 30rem;
         font-size: smaller;
-        font-weight: lighter;
+        font-weight: normal;
+        color: white;
     }
 
     #btnDel {
         font-size: smaller;
     }
     #operators {
-        width: 25rem;
+        width: 23rem;
+        font-size: smaller;
+        color: white;
     }
 }
