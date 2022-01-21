@@ -14,17 +14,13 @@ html {
     display: flex;
     position: relative;
     min-height: 100%;
+    margin-left: 2rem;
+    overflow: hidden;
 }
 
 #wrapper {
     display: flex;
     flex-direction: column;
-    /* justify-self: flex-end; */
-    /* justify-items: center; */
-    /* justify-content: center; */
-    /* align-self: center; */
-    /* float: right; */
-    /* flex: auto; */
     border: 15px solid darkblue;
     border-radius: 10px;
     margin-left: 6.5rem;
