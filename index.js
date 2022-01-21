@@ -196,7 +196,7 @@ function keyPress(event) {
     if(event.key.includes('=') || 
         event.key.includes('Enter')) {
         event.preventDefault();
-        if(event.key.includes('=')) {
+        if(event.key.includes('=')|| event.key.includes('Enter')) {
             btnEqual.classList.add('hover');
         }
         equalFunc(event.key);
