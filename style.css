@@ -218,6 +218,8 @@ button:hover {
     button {
         height: 2rem;
         width: 2rem;
+        font-size: smaller;
+        font-weight: lighter;
     }
 
     #buttons {
@@ -226,7 +228,7 @@ button:hover {
 
     #numbers {
         width: 30rem;
-        font-size: small;
+        font-size: smaller;
         font-weight: lighter;
     }
 
