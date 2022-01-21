@@ -1,29 +1,37 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
 html {
     background-color: black;
     color: silver;
     font-family: monospace;
-    box-sizing: border-box;
-    background-image: linear-gradient(rgba(75, 75, 75, 0.7), rgba(75, 75, 75, 0.7)), url("./chalkboard.jpg");
+        background-image: linear-gradient(rgba(75, 75, 75, 0.7), rgba(75, 75, 75, 0.7)), url("./chalkboard.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: top center;
     background-repeat: no-repeat;
     justify-content: center;
     display: flex;
+    position: relative;
+    min-height: 100%;
 }
 
 #wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-self: center;
-    flex: 1;
+    /* justify-self: flex-end; */
+    /* justify-items: center; */
+    /* justify-content: center; */
+    /* align-self: center; */
+    /* float: right; */
+    /* flex: auto; */
     border: 15px solid darkblue;
     border-radius: 10px;
     margin-left: 6.5rem;
     margin-right: 6.5rem;
     margin-top: 1rem;
-    width: 25rem;
+    width: 28.5rem;
+    height: 33rem;
 }
 
 h2 {
@@ -36,13 +44,13 @@ h2 {
 
 #welcome {
     background-color: darkslategray;
-    width: 25rem;
+    width: 26rem;
     text-align: center;
 }
 
 #display {
     background-color: gray;
-    width: 23rem;
+    width: 26rem;
     text-align: end;
     border: 1rem solid gray;
 }
@@ -50,7 +58,7 @@ h2 {
 #buttons {
     display: flex;
     flex-direction: row;
-    width: 25rem;
+    width: 26rem;
 }
 
 #numbers {
@@ -108,4 +116,26 @@ button:hover {
     color: black;
     border: 1px solid silver;
     transform: scale(1.15);
+}
+
+.footer {
+    position: absolute;
+    bottom: -3rem;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: -2rem;
+}
+
+.footer>a>img {
+    max-height: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer>a>img:hover {
+    transform: scale(-1, 1) scale(1);
+    opacity: 33%;
 }
