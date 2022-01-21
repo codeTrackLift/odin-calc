@@ -142,3 +142,35 @@ button:hover {
     transform: scale(-1, 1) scale(1);
     opacity: 33%;
 }
+
+@media (max-width: 360px) {
+    #wrapper {
+        width: 23rem;
+        height: fit-content;
+    }
+
+    #welcome {
+        width: max-content;
+        font-size: small;
+    }
+
+    #display {
+        width: 20rem;
+    }
+
+    button {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    #buttons {
+        width: 20rem;
+    }
+    #numbers {
+        width: 30rem;
+    }
+
+    #operators {
+        width: 20rem;
+    }
+}
