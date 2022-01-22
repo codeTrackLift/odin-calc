@@ -140,6 +140,11 @@ button:hover {
     opacity: 33%;
 }
 
+#gitLogo.flip {
+    transform: scale(-1, 1) scale(1);
+    opacity: 33%;
+}
+
 @media (max-width: 320px) {
     
     html {
