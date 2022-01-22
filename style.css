@@ -9,17 +9,12 @@ html {
     background-size: cover;
     background-attachment: fixed;
     background-position: top center;
-    /* background-repeat: round; */
     justify-content: center;
     display: flex;
     position: fixed;
     width: 100vw;
     height: 500rem;
     margin: 0 auto;
-}
-
-body {
-    overflow: overflow-y;
 }
 
 #wrapper {
@@ -135,12 +130,12 @@ button:hover {
     width: fit-content;
 }
 
-.footer>a>img {
+#gitLogo {
     max-height: 30px;
     transition: transform 0.5s ease-in-out;
 }
 
-.footer>a>img:hover {
+#gitLogo:hover {
     transform: scale(-1, 1) scale(1);
     opacity: 33%;
 }
@@ -151,7 +146,6 @@ button:hover {
         width: 100vw;
         background-position: top;
         background-size: 30rem;
-        /* background-repeat: round; */
     }
 
     #wrapper {
@@ -240,5 +234,29 @@ button:hover {
         width: 23rem;
         font-size: smaller;
         color: white;
+    }
+}
+
+/* Shake animation */
+#wrapper.shake, #display.shake, #gitLogo.shake {
+    animation: shake 0.5s linear 1;
+}
+@keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
     }
 }

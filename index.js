@@ -1,6 +1,7 @@
 // Global variables & initializing display
 const wrapper = document.querySelector('#wrapper');
 const gitLogo = document.querySelector('#gitLogo');
+const displayShake = document.querySelector('#display');
 const tinkSound = new Audio('./tink.wav');
 const kickSound = new Audio('./kick.wav');
 const hihatSound = new Audio('./hihat.wav');
@@ -157,7 +158,14 @@ function equalFunc() {
     () => {
         gitLogo.classList.remove('shake');
     },
-    { once: false }
+    { once: true }
+    );
+    displayShake.classList.add('shake');
+    displayShake.addEventListener('animationend',
+    () => {
+        displayShake.classList.remove('shake');
+    },
+    { once: true }
     );
     operate(a, oper, b);
     a = +display;
