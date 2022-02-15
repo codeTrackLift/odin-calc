@@ -72,7 +72,7 @@ function input(n) {
     if(display === oper) {
         display = "";
     }
-    if(n === "." && testStr.includes(".") === true) {
+    if(n === "." && testStr.includes(".")) {
         kickSound.play();
         return;
     }
@@ -92,7 +92,7 @@ function input(n) {
 // Handling variable b 
 function inputB(n) {
     let testStr = b.toString();
-    if(n === "." && testStr.includes(".") === true) {
+    if(n === "." && testStr.includes(".")) {
         kickSound.play();
         return;
     }
@@ -108,13 +108,13 @@ function inputB(n) {
     if(b !== "") {
         b = b.toString();
         b = b + n.toString();
-        updateDisplay();
         tinkSound.play();
+        updateDisplay();
         return;
     }
     b = n;
-    updateDisplay();
     tinkSound.play();
+    updateDisplay();
     return;
 }
 
