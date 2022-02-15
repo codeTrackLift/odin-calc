@@ -76,8 +76,12 @@ function input(n) {
         kickSound.play();
         return;
     }
-    if(n === 0 && display === 0) {
+    if(n == 0 && display == 0 && !display.includes('.')) {
+        kickSound.play();
         return;
+    }
+    if(n === '.' && display == 0) {
+        display = '0';
     }
     display = display.toString();
     display = display + n.toString();
@@ -87,23 +91,30 @@ function input(n) {
 
 // Handling variable b
 function inputB(n) {
-    kickSound.play();
     let testStr = b.toString();
     if(n === "." && testStr.includes(".") === true) {
-        tinkSound.play();
+        kickSound.play();
         return;
     }
-    if(n === 0 && b === 0) {
+    if(n == 0 && b == '') {
+        b = 0;
+        updateDisplay();
+        kickSound.play();
+    }
+    if(n == 0 && b == 0 && !b.includes('.')) {
+        kickSound.play();
         return;
     }
     if(b !== "") {
         b = b.toString();
         b = b + n.toString();
         updateDisplay();
+        tinkSound.play();
         return;
     }
     b = n;
     updateDisplay();
+    tinkSound.play();
     return;
 }
 
