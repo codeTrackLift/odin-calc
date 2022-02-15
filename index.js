@@ -141,6 +141,8 @@ function newOper(x) {
     // Loops back to continue the previous operation
     if(oper !== "") {
         equalFunc();
+        oper = x;
+        updateDisplay();
         return;
     }
     oper = x;
