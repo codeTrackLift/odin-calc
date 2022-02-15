@@ -89,7 +89,7 @@ function input(n) {
     updateDisplay();
 }
 
-// Handling variable b
+// Handling variable b 
 function inputB(n) {
     let testStr = b.toString();
     if(n === "." && testStr.includes(".") === true) {
