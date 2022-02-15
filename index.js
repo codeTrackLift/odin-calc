@@ -2,12 +2,12 @@
 const wrapper = document.querySelector('#wrapper');
 const gitLogo = document.querySelector('#gitLogo');
 const displayShake = document.querySelector('#display');
-const tinkSound = new Audio('./tink.wav');
-const kickSound = new Audio('./kick.wav');
-const hihatSound = new Audio('./hihat.wav');
-const openhatSound = new Audio('./openhat.wav');
-const snareSound = new Audio('./snare.wav');
-const rideSound = new Audio('./ride.wav');
+const tinkSound = new Audio('./sounds/tink.wav');
+const kickSound = new Audio('./sounds/kick.wav');
+const hihatSound = new Audio('./sounds/hihat.wav');
+const openhatSound = new Audio('./sounds/openhat.wav');
+const snareSound = new Audio('./sounds/snare.wav');
+const rideSound = new Audio('./sounds/ride.wav');
 let display = "";
 let a = 0;
 let b = "";
@@ -19,16 +19,16 @@ function operate(a, oper, b) {
     b = +b;
     switch (oper) {
         case '+':
-            display = a + b;
+            display = +(a + b).toFixed(10);
             break;
         case '-':
-            display = a - b;
+            display = +(a - b).toFixed(10);
             break;
         case '*':
-            display = a * b;
+            display = +(a * b).toFixed(10);
             break;
         case '/':
-            display = a / b;
+            display = +(a / b).toFixed(10);
             break;
     }
     updateDisplay();
@@ -64,7 +64,6 @@ function clearCalc() {
 
 // Initial value input and handling variable a
 function input(n) {
-
     let testStr = display.toString();
     if(a !== "" && oper !== "") {
         inputB(n);

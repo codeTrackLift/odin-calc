@@ -5,7 +5,7 @@ html {
     background-color: rgb(62, 61, 61);
     color: silver;
     font-family: monospace;
-    background-image: linear-gradient(rgba(75, 75, 75, 0.7), rgba(75, 75, 75, 0.7)), url("./chalkboard.jpg");
+    background-image: linear-gradient(rgba(75, 75, 75, 0.7), rgba(75, 75, 75, 0.7)), url("./pics/chalkboard.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: top center;
