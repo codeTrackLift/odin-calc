@@ -76,7 +76,7 @@ function input(n) {
         kickSound.play();
         return;
     }
-    if(n == 0 && display == 0) {
+    if(n === 0 && display === 0) {
         return;
     }
     display = display.toString();
@@ -93,7 +93,7 @@ function inputB(n) {
         tinkSound.play();
         return;
     }
-    if(n == 0 && b == 0) {
+    if(n === 0 && b === 0) {
         return;
     }
     if(b !== "") {
