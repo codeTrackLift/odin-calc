@@ -197,6 +197,10 @@ button:hover {
         background-repeat: round;
     }
 
+    h1 {
+        font-size: 1.5rem;
+    }
+
     #wrapper {
         width: fit-content;
         height: 18rem;
