@@ -5,9 +5,10 @@
 >**Skills Utilized**:
 <ol>
     <li>Languages: HTML, CSS, JavaScript</li>
+    <li>Callback Functions</li>
     <li>DOM Manipulation</li>
     <li>Key Press and Event Listeners</li>
-    <li>CSS Animations</li>
+    <li>CSS Transitions and Animations</li>
 </ol>
 
 ## About
@@ -25,16 +26,15 @@ This is my third JavaScript project and was completed as part of The Odin Projec
 >**Custom Features**:
 <ol>
     <li>Fully responsive and mobile compatible</li>
-    <li>CSS animations effects</li>
+    <li>CSS animations and hover effects</li>
     <li>Drum kit sound effects</li>
-    <li>Custom styling</li>
 </ol>
 
 ## How to Run
-This JavaScript Calculator accepts mouse, keyboard, and mobile touch inputs.
+This JavaScript Calculator accepts mouse, keyboard, and mobile device inputs.
 
 ## Future Roadmap
-This is a progression project and will not be further developed.
+This is a progression project, no further development is anticipated.
 
 ## MIT License
 
