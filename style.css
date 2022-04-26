@@ -1,6 +1,9 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
     box-sizing: border-box;
 }
+
 html {
     background-color: rgb(62, 61, 61);
     color: silver;
@@ -43,7 +46,8 @@ h2 {
     justify-content: center;
 }
 
-#aDisplay,#bDisplay {
+#aDisplay,
+#bDisplay {
     color: cyan;
 }
 
@@ -146,7 +150,7 @@ button:hover {
 }
 
 @media (max-width: 320px) {
-    
+
     html {
         width: 100vw;
         background-position: top;
@@ -178,6 +182,7 @@ button:hover {
     #buttons {
         width: 20rem;
     }
+
     #numbers {
         width: 30rem;
     }
@@ -188,7 +193,7 @@ button:hover {
 }
 
 @media (max-height: 480px) {
-    
+
     html {
         width: 100vw;
         height: 100vh;
@@ -239,6 +244,7 @@ button:hover {
     #btnDel {
         font-size: smaller;
     }
+
     #operators {
         width: 23rem;
         font-size: smaller;
@@ -247,25 +253,85 @@ button:hover {
 }
 
 /* Shake animation */
-#wrapper.shake, #display.shake, #gitLogo.shake {
+#wrapper.shake,
+#display.shake,
+#gitLogo.shake {
     animation: shake 0.5s linear 1;
 }
+
 @keyframes shake {
+
     10%,
     90% {
         transform: translate3d(-1px, 0, 0);
     }
+
     20%,
     80% {
         transform: translate3d(2px, 0, 0);
     }
+
     30%,
     50%,
     70% {
         transform: translate3d(-4px, 0, 0);
     }
+
     40%,
     60% {
         transform: translate3d(4px, 0, 0);
     }
+}
+
+/* Footer Below */
+footer {
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    color: white;
+}
+
+footer>a,
+footer>p {
+    margin: auto 0;
+}
+
+footer>p>a>span {
+    font-style: italic;
+}
+
+footer>p>a {
+    text-decoration: none;
+}
+
+footer>p>a>img {
+    animation: slowSpin 5s ease-in-out infinite;
+    margin-bottom: -0.5rem;
+}
+
+@keyframes slowSpin {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(-1, 1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.socialLogo {
+    max-height: 1.5rem;
+    transition: transform 0.5s ease-in-out;
+    margin-bottom: -0.5rem;
+}
+
+.socialLogo:hover {
+    transform: scale(-1, 1) scale(1);
 }
