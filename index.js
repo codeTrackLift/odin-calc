@@ -165,13 +165,6 @@ function newOper(x) {
 // Equal button
 function equalFunc() {
     rideSound.play();
-    gitLogo.classList.add('flip');
-    gitLogo.addEventListener('transitionend',
-    () => {
-        gitLogo.classList.remove('flip');
-    },
-    { once: true }
-    );
     displayShake.classList.add('shake');
     displayShake.addEventListener('animationend',
     () => {
